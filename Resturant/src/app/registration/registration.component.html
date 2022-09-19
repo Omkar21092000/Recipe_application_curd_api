@@ -1,0 +1,55 @@
+<p>{{message}}</p>
+<div class="container">
+  <h2> Add new dish</h2>
+  <form #addproductform="ngForm" [formGroup]="registerForm" >
+    <!-- {{product | json}} -->
+    <div class="form-group">
+      <label for="dishname">Dishname</label>
+      <input type="text" class="form-control"  [(ngModel)]="product.dishname" placeholder="Dishname" name="dishname" formControlName="dishname">
+      <div *ngIf="registerForm.controls['dishname'].errors" class="alert alert-danger">
+        <p *ngIf="registerForm.controls['dishname'].errors?.['required']">
+            This field is required!
+        </p>                
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="typo">Type</label>
+      <input type="text" class="form-control" placeholder="Veg/Nonvegetrien"  [(ngModel)]="product.type" name="typo" formControlName="type">
+      <div *ngIf="registerForm.controls['type'].errors" class="alert alert-danger">
+        <p *ngIf="registerForm.controls['type'].errors?.['required']">
+            This field is required!
+        </p>                
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="methodofcooking">Method of Cooking</label>
+      <input type="text" class="form-control" placeholder="Fried/Oven/Boil" [(ngModel)]="product.methodofcooking" name="methodofcooking" formControlName="methodofcooking">
+      <div *ngIf="registerForm.controls['methodofcooking'].errors" class="alert alert-danger">
+        <p *ngIf="registerForm.controls['methodofcooking'].errors?.['required']">
+            This field is required!
+        </p>                
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="ingredient">Ingredient</label>
+      <input type="text" class="form-control" placeholder="Tumeric,Cumin Seed, etc....."  [(ngModel)]="product.ingredient" name="ingredient" formControlName="ingredient">
+      <div *ngIf="registerForm.controls['ingredient'].errors" class="alert alert-danger">
+        <p *ngIf="registerForm.controls['ingredient'].errors?.['required']">
+            This field is required!
+        </p>                
+    </div>
+    </div>
+
+    <div class="form-group">
+        <label for="serve">Serve</label>
+        <input type="text" class="form-control" placeholder="1/2/3/4/etc...."  [(ngModel)]="product.serve" name="serve" formControlName="serve">
+        <div *ngIf="registerForm.controls['serve'].errors" class="alert alert-danger">
+          <p *ngIf="registerForm.controls['serve'].errors?.['required']">
+              This field is required!
+          </p>                
+      </div>
+      </div>
+    <button type="submit" class="btn btn-success"  (click)="addnewdish()">Submit</button>
+    <button type="submit" class="btn btn-secondary" (click)="gotolist()">Back</button>
+  </form>
+</div>

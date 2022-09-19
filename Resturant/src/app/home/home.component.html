@@ -1,0 +1,43 @@
+<h3>Resturant Menu</h3>
+<div class="search-hero">
+    <span>Search:</span>&nbsp;
+    <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search your food......">
+</div>
+<br/>
+
+
+<table class="table">
+    <thead class="thead-dark" style="width:100%;">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">DishName</th>
+        <th scope="col">Ingredient</th>
+        <th scope="col">Methodofcooking</th>
+        <th scope="col">NumberofServe</th>
+        <th scope="col">Type(Veg/Non Veg)</th>
+        <!-- <th scope="col">Action</th> -->
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of listofmenu | filter:searchText">
+        <th scope="row">{{c.id}}</th>
+        <td>{{c.dishname}}</td>
+        <td>{{c.ingredient}}</td>
+        <td>{{c.methodofcooking}}</td>
+        <td>{{c.serve}}</td>
+        <td>{{c.type}}</td>
+<!--         
+        
+        
+        <button type="button" class="btn btn-primary" (click)="UpdateProductmenu(c.id)">Edit</button>
+        <button type="button" class="btn btn-danger" >Delete</button> -->
+
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-success" (click)="gotoaddnewmenu()">Add new food items</button>
+  
+ 
+

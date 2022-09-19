@@ -1,0 +1,31 @@
+<p>editmenu works!</p>
+
+<div class="container">
+  <h2> Add new dish</h2>
+  <form #addproductform="ngForm" (ngSubmit)="updatedish()">
+    <!-- {{product | json}} -->
+    <div class="form-group">
+      <label for="dishname">Dishname</label>
+      <input type="text" class="form-control" required [(ngModel)]="product.dishname" name="dishname">
+    </div>
+    <div class="form-group">
+      <label for="typo">Type</label>
+      <input type="text" class="form-control" required [(ngModel)]="product.type" name="typo">
+    </div>
+    <div class="form-group">
+      <label for="methodofcooking">Method of Cooking</label>
+      <input type="text" class="form-control" required [(ngModel)]="product.methodofcooking" name="methodofcooking">
+    </div>
+    <div class="form-group">
+      <label for="ingredient">Ingredient</label>
+      <input type="text" class="form-control" required [(ngModel)]="product.ingredient" name="ingredient">
+    </div>
+
+    <div class="form-group">
+        <label for="serve">Serve</label>
+        <input type="text" class="form-control" required [(ngModel)]="product.serve" name="serve">
+      </div>
+    <button type="submit" class="btn btn-success" >Update</button>
+    <button type="submit" class="btn btn-secondary" (click)="gotolist()">Back</button>
+  </form> 
+</div>
