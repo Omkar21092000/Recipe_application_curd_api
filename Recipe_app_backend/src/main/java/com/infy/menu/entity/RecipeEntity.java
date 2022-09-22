@@ -1,5 +1,4 @@
 package com.infy.menu.entity;
-import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
 @Table(name="foodlist")
-public class Food {
+public class RecipeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -56,7 +55,7 @@ public class Food {
         this.serve = serve;
     }
    
-    public Food() {
+    public RecipeEntity() {
     }
 	public String getIngredient() {
 		return ingredient;
@@ -64,7 +63,7 @@ public class Food {
 	public void setIngredient(String ingredient) {
 		this.ingredient = ingredient;
 	}
-	public Food(long id, String dishname, String type, String methodofcooking, String ingredient,
+	public RecipeEntity(long id, String dishname, String type, String methodofcooking, String ingredient,
 			Integer serve) {
 		super();
 		this.id = id;

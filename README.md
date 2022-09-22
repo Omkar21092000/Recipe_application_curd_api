@@ -1,15 +1,20 @@
+# Recipe Application
+Simple web page application which contain list of recipe with there detail and having some CURD base api.For the database mysql is used to perform curd base application. All the necessary dependency has been add.
 
-# SpringBoot Curd API
-#Version
 
+# Version
 Java Version 17
 Mysql
 Angular CLI: 13.1.3
 
-#API
+# Database
+  Name:foodlist
 
+
+# API
 Post request
 To add data in database:http://localhost:8080/menu/add
+
 
 GET request
 To fetch all data:http://localhost:8080/menu/all
