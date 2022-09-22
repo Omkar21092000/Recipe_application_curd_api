@@ -14,6 +14,12 @@ Angular CLI: 13.1.3
 # API
 Post request
 To add data in database:http://localhost:8080/menu/add
+![AddInMenu_backend](https://user-images.githubusercontent.com/91202848/191707749-eb2e22f2-d8e8-4413-babe-9fb40a66bfa2.jpg)
+![addedfood_sucessfully](https://user-images.githubusercontent.com/91202848/191708548-ce160aa2-291f-425f-b223-ffdc1c12a60b.jpg)
+![addedfood_sucessfully](https://user-images.githubusercontent.com/91202848/191708608-4f967840-02f7-448b-aeb7-17f234652b00.jpg)
+
+
+
 
 
 GET request
